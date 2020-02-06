@@ -6,7 +6,7 @@
   "depends" : [ ],
   "description" : "Read a stream of joystick events",
   "license" : "Artistic-2.0",
-  "name" : "Linux::Joystick",
+  "name" : "Linux-Joystick",
   "perl" : "6.c",
   "provides" : {
     "Linux::Joystick" : "lib/Linux/Joystick.pm6"
