@@ -88,7 +88,7 @@ The callback routine is rewritable and may be changed without restarting the
 joystick driver.
 
 Needs to be initilized with a path to a valid, active joystick or joystick-like
-device. (An Xbox conroller will work.) Optionally takes a callable routine to be
+device. (An Xbox controller will work.) Optionally takes a callable routine to be
 executed every time an event is received.
 
 An exported routine: C<devices()> can be used to find and list available joystick
@@ -100,7 +100,7 @@ C<$joystick.config> contains the enumerated inputs and their present value.
 Assuming your joystick has 12 buttons and 6 axes (Like a Logitech Extreme 3D for
 instance.) The enumerated button values will be in C<$joystick.config<button>[0]>
 through C<$joystick.config<button>[11]>. The enumerated axes will be in
-C<$joystick.config<axis>[0]> through C<$joystick.config<button>[5]> .
+C<$joystick.config<axis>[0]> through C<$joystick.config<axis>[5]> .
 
 You may also access events directly. C<$joystick.event> will hold the values from
 the last event processed.
@@ -109,7 +109,7 @@ It holds the values:
 
 =item C<type>   - the type of joystick event it was; 1: button, 2: axis
 
-=item C<number> - which input emmitted the event: one of the enumerated buttons or axes
+=item C<number> - which input emitted the event: one of the enumerated buttons or axes
 
 =item C<value>  - the value associated with the event; button: 0 or 1, axis: -32767 to 32767
 

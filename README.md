@@ -24,13 +24,13 @@ Sets up an asynchronous event stream reading events from the joystick in real ti
 
 The callback routine is rewritable and may be changed without restarting the joystick driver.
 
-Needs to be initilized with a path to a valid, active joystick or joystick-like device. (An Xbox conroller will work.) Optionally takes a callable routine to be executed every time an event is received.
+Needs to be initilized with a path to a valid, active joystick or joystick-like device. (An Xbox controller will work.) Optionally takes a callable routine to be executed every time an event is received.
 
 An exported routine: `devices()` can be used to find and list available joystick devices.
 
 Exports two hashes. `$joystick.config` and `$joystick.event`.
 
-`$joystick.config` contains the enumerated inputs and their present value. Assuming your joystick has 12 buttons and 6 axes (Like a Logitech Extreme 3D for instance.) The enumerated button values will be in `$joystick.config<button>[0]` through `$joystick.config<button>[11]`. The enumerated axes will be in `$joystick.config<axis>[0]` through `$joystick.config<button>[5]` .
+`$joystick.config` contains the enumerated inputs and their present value. Assuming your joystick has 12 buttons and 6 axes (Like a Logitech Extreme 3D for instance.) The enumerated button values will be in `$joystick.config<button>[0]` through `$joystick.config<button>[11]`. The enumerated axes will be in `$joystick.config<axis>[0]` through `$joystick.config<axis>[5]` .
 
 You may also access events directly. `$joystick.event` will hold the values from the last event processed.
 
@@ -38,7 +38,7 @@ It holds the values:
 
   * `type` - the type of joystick event it was; 1: button, 2: axis
 
-  * `number` - which input emmitted the event: one of the enumerated buttons or axes
+  * `number` - which input emitted the event: one of the enumerated buttons or axes
 
   * `value` - the value associated with the event; button: 0 or 1, axis: -32767 to 32767
 
