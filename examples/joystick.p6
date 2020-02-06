@@ -16,7 +16,7 @@ signal(SIGINT).tap: { print "\e[0m", "\n" xx 50, "\e[H\e[J\e[?25h"; outtahere }
 
 my ($rows, $cols) = qx/stty size/.words; # get the terminal size
 
-my $xhair = '╺╋╸'; # termial crosshair
+my $xhair = '╺╋╸'; # terminal crosshair
 my $axis  = '█';   # bar graph block
 
 # generate text IDs for the buttons
@@ -67,7 +67,7 @@ sub update {
     # clear screen, move to upper left
     print "\e[H\e[J\e[1;1H";
 
-    # pring button and axis states
+    # print button and axis states
     print "  ", join "  ", flat @button, "Axis 0: $x", "Axis 1: $y" , "Axis 2: $z%\n";
 
     # scale the bar graph and print it
