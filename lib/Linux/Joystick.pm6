@@ -1,5 +1,5 @@
 use v6.c;
-unit class Linux::Joystick:ver<0.0.1>:auth<github:thundergnat>;
+unit class Linux::Joystick:ver<0.0.2>:auth<github:thundergnat>;
 
 use experimental :pack;
 
@@ -7,10 +7,14 @@ use experimental :pack;
 # the number assigned by the OS.
 
 sub devices is export {
-    my @devices = '/dev/input/'.IO.dir.grep( *.contains('/js') ).sort;
-    @devices.append: '/dev/'.IO.dir.grep( *.contains('/js') );
+    my @devices;
+    for '/dev/input/', '/dev/' -> $path {
+        if $path.IO.e {
+            @devices.append: $path.IO.dir.grep( *.contains('/js') ).sort;
+        }
+    }
     print 'No ' unless +@devices;
-    say "active Joystick devices:";
+    say "active Joystick devices";
     .path.say for @devices;
     @devices;
 }
@@ -25,7 +29,8 @@ class Linux::Joystick {
     method TWEAK {
         # need a device
         unless $!device and $!device.IO.e {
-            note "<$!device> not found.\nNeed to provide a path to an active device, try running" ~
+            $!device //= 'null device';
+            note "<{$!device}> not found.\nNeed to provide a path to an active device, try running" ~
             " devices() to see which joysticks are available, see below.\n";
             devices();
             exit ;
