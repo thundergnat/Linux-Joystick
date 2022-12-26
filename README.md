@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/thundergnat/Linux-Joystick/actions/workflows/test.yml/badge.svg)](https://github.com/thundergnat/Linux-Joystick/actions)
+
 NAME
 ====
 
@@ -6,7 +8,7 @@ Linux::Joystick
 SYNOPSIS
 ========
 
-```perl6
+```raku
 use Linux::Joystick;
 
 my $joystick = Linux::Joystick.new(
@@ -48,7 +50,7 @@ Button values can only be 0 (up) or 1 (pressed). Axis values can (though not nec
 
 If you end up tapping a SIGINT signal, the joystick stream won't close until it sees one more joystick event, the joystick is unplugged, or you send another different terminate event.
 
-See the /examples/joystick.p6 script to see how that might be done.
+See the [/examples/joystick.p6](https://github.com/thundergnat/Linux-Joystick/blob/master/examples/joystick.p6) script to see how that might be done.
 
 AUTHOR
 ======

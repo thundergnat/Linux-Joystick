@@ -1,3 +1,9 @@
 Revision history for Linux-Joystick
 
+{{$NEXT}}
+    - Migrate to the fez ecosystem
+
+
+0.0.2  - Make a litle less fragile when a joystick device is not found
+
 0.0.1  - Initial version

@@ -1,5 +1,4 @@
-use v6.c;
-unit class Linux::Joystick:ver<0.0.2>:auth<github:thundergnat>;
+unit class Linux::Joystick:ver<0.0.3>:auth<zef:thundergnat>;
 
 use experimental :pack;
 
@@ -70,7 +69,7 @@ Linux::Joystick
 
 =head1 SYNOPSIS
 
-=begin code :lang<perl6>
+=begin code :lang<raku>
 
 use Linux::Joystick;
 
@@ -130,7 +129,7 @@ If you end up tapping a SIGINT signal, the joystick stream won't close until it
 sees one more joystick event, the joystick is unplugged, or you send another
 different terminate event.
 
-See the /examples/joystick.p6 script to see how that might be done.
+See the L</examples/joystick.p6|https://github.com/thundergnat/Linux-Joystick/blob/master/examples/joystick.p6> script to see how that might be done.
 
 =head1 AUTHOR
 

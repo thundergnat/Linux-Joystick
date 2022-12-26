@@ -1,20 +1,28 @@
 {
-  "authors" : [
+  "auth": "zef:thundergnat",
+  "authors": [
     "thundergnat"
   ],
-  "build-depends" : [ ],
-  "depends" : [ ],
-  "description" : "Read a stream of joystick events",
-  "license" : "Artistic-2.0",
-  "name" : "Linux-Joystick",
-  "perl" : "6.c",
-  "provides" : {
-    "Linux::Joystick" : "lib/Linux/Joystick.pm6"
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Read a stream of joystick events under Linux",
+  "license": "Artistic-2.0",
+  "name": "Linux::Joystick",
+  "perl": "6.*",
+  "provides": {
+    "Linux::Joystick": "lib/Linux/Joystick.pm6"
   },
-  "resources" : [ ],
-  "source-type" : "git",
-  "source-url"  : "git://github.com/thundergnat/Linux-Joystick.git",
-  "tags" : ["joystick", "game controller", "event stream" ],
-  "test-depends" : [ ],
-  "version" : "0.0.2"
+  "resources": [
+  ],
+  "source-url": "git://github.com/thundergnat/Linux-Joystick.git",
+  "tags": [
+    "joystick",
+    "game controller",
+    "event stream"
+  ],
+  "test-depends": [
+  ],
+  "version": "0.0.3"
 }
