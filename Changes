@@ -1,6 +1,8 @@
 Revision history for Linux-Joystick
 
 {{$NEXT}}
+
+0.0.3  2022-12-26T10:05:11-05:00
     - Migrate to the fez ecosystem
 
 
