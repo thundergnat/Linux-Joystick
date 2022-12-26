@@ -84,6 +84,8 @@ my $joystick = Linux::Joystick.new(
 
 Linux::Joystick - a simple interface to the most common Linux joystick driver.
 
+(Also tested and working under Mac OSX.)
+
 Sets up an asynchronous event stream reading events from the joystick in real
 time.  Allows you to provide a callback routine which will execute every time an
 event  is received.
